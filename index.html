@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>😂 Random Joke Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-laugh-beam"></i> Random Joke Generator</h1>
+            <p class="subtitle">Get ready to laugh out loud! 😂</p>
+        </header>
+
+        <main>
+            <div class="joke-card">
+                <div class="joke-category">Joke Type: <span id="category">Any</span></div>
+                <div class="joke-content" id="joke-area">
+                    <div class="default-message">
+                        <i class="fas fa-smile-wink"></i>
+                        <p>Click the button below to generate a hilarious joke!</p>
+                    </div>
+                </div>
+                <div class="joke-stats">
+                    <div class="stat">
+                        <i class="fas fa-tags"></i>
+                        <span id="type">Single</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-star"></i>
+                        <span id="rating">Safe</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="category-selector">
+                    <label for="category-select"><i class="fas fa-filter"></i> Select Category:</label>
+                    <select id="category-select">
+                        <option value="Any">Any Category</option>
+                        <option value="Programming">Programming</option>
+                        <option value="Misc">Miscellaneous</option>
+                        <option value="Dark">Dark Humor</option>
+                        <option value="Pun">Puns</option>
+                        <option value="Spooky">Spooky</option>
+                        <option value="Christmas">Christmas</option>
+                    </select>
+                </div>
+
+                <button id="joke-button" class="btn-primary" type="button">
+                    <i class="fas fa-magic"></i>
+                    <span class="btn-text">Generate Joke</span>
+                </button>
+
+                <div class="action-buttons">
+                    <button id="copy-button" class="btn-secondary" title="Copy joke to clipboard" type="button" aria-label="copy-button">
+                        <i class="far fa-copy"></i>
+                    </button>
+                    <button id="tweet-button" class="btn-secondary" title="Share on Twitter" type="button" aria-label="tweet-button">
+                        <i class="fab fa-twitter"></i>
+                    </button>
+                    <button id="fav-button" class="btn-secondary" title="Save to favorites" type="button" aria-label="fav-button">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button id="history-button" class="btn-secondary" title="View history" type="button" aria-label="history-button">
+                        <i class="fas fa-history"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="history-panel hidden" id="history-panel">
+                <h3><i class="fas fa-history"></i> Joke History</h3>
+                <ul id="history-list"></ul>
+                <button id="clear-history" class="btn-small" type="button">Clear History</button>
+            </div>
+
+            <div class="counter">
+                <p>Jokes Generated: <span id="joke-count">0</span></p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by JokeAPI | Made with <i class="fas fa-heart"></i> for laughter</p>
+        </footer>
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
