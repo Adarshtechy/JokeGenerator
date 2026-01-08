@@ -1,6 +1,6 @@
-## 😂 JokeFlow – Interactive Joke Generator
+## 😂 JokeGenerator
 
-**JokeFlow** is a modern, interactive web application that delivers random jokes seamlessly using the **JokeAPI**. 
+**JokeGenerator** is a modern, interactive web application that delivers random jokes seamlessly using the **JokeAPI**. 
 Built with a focus on clean UI, smooth user experience, and practical frontend features, JokeFlow showcases strong fundamentals in JavaScript, API integration, and responsive design.
 
 ## 🚀 Features
@@ -39,7 +39,7 @@ Built with a focus on clean UI, smooth user experience, and practical frontend f
 
 ## 📁 Project Structure
 ```
-jokeflow/
+JokeGenerator/
 │
 ├── index.html # Application structure
 ├── styles.css # Styling and responsive design
